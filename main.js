@@ -113,7 +113,7 @@ function multiplyNumbers(array, value){
   return multipliedArray;
 }
 
-multiplyNumbers(array);
+// multiplyNumbers(array);
 
 
 
@@ -132,7 +132,21 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 
+function doubleLetters(string){
+  let doubledString = "";
+  // let stringArray = string.split("");
+  // let doubledArray = [];
 
+  for (var i = 0; i < string.length; i++){
+    console.log(string[i]);
+      doubledString += string[i] + string[i];
+      console.log(doubledString);
+
+  }
+  // doubledArray.join("")
+
+  return doubledString;
+}
 
 
 
