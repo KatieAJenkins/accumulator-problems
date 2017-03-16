@@ -1,10 +1,12 @@
+'use strict';
+
 /*
 ----------------------------------------
 SAMPLE
 ----------------------------------------
 
-Challenge: Write function named test that returns the string "This Works!". 
-Solution: This one has already been complete for you. 
+Challenge: Write function named test that returns the string "This Works!".
+Solution: This one has already been complete for you.
 
 */
 
@@ -25,9 +27,24 @@ Write function named sum that will take an array of numbers and return the sum o
 Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
 */
 
+let array1 = [1,2,3];
 
+function sum (array) {
+  let sum = 0;
 
+  if(array.length === 0){
+    return 0;
+  }
 
+  for(var i = 0; i < array.length; i++){
+    sum += array[i];
+  }
+  return sum;
+}
+
+console.log(sum(array1));
+
+sum(array1);
 
 
 
@@ -43,7 +60,24 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+let emptyArray = [];
 
+function doubleNumbers(array){
+  let doubled = [];
+
+  if(array.length === 0){
+    return [];
+  }
+
+    for(var i = 0; i < array.length; i++){
+      doubled.push(array[i] * 2);
+    }
+  return doubled;
+}
+
+console.log(doubleNumbers(array1));
+doubleNumbers(array1);
+console.log(doubleNumbers(emptyArray));
 
 
 
@@ -794,4 +828,4 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
 
 
 
-// 
+//
