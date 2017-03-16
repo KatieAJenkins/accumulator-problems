@@ -99,6 +99,21 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
+function multiplyNumbers(array, value){
+  let multipliedArray =[];
+
+  if(array.length === 0){
+    return [];
+  }
+
+    for(var i = 0; i < array.length; i++){
+      multipliedArray.push(array[i] * value);
+    }
+
+  return multipliedArray;
+}
+
+multiplyNumbers(array);
 
 
 
