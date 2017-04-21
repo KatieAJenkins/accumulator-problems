@@ -169,11 +169,9 @@ NOTE: you can assume each input will be the same length
 function interleave(array1, array2){
   var newArray = [];
   for(var i = 0; i < array1.length; i++){
-    console.log(array1[i])
-    console.log(array2[i]);
     newArray.push(array1[i], array2[i]);
   }
-  console.log(newArray);
+  // console.log(newArray);
   return newArray;
 };
 
@@ -190,12 +188,15 @@ Write function named createRange that will take a number and a default value and
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
 
+function createRange(number, value){
+  let valueArray = [];
+  for(var i = 0; i < number; i++){
+    valueArray.push(value);
+  }
+  return valueArray;
+}
 
-
-
-
-
-
+createRange(4, "hey");
 
 /*
 ----------------------------------------
