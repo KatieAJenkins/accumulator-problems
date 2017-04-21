@@ -210,12 +210,25 @@ Example:
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
 
+function flipArray(array){
+  var object = {};
+  for(var i = 0; i < array.length; i++){
+    var key = array[i]
+    var stringKey = key.toString();
+    console.log((typeof stringKey));
+    console.log(stringKey);
+    console.log('key', key);
+    console.log(array[i]);
+    console.log(object);
+    object[key] = i;
+    // console.log(object[i]);
+    // console.log(object[i] = array[i]);
+  }
+  console.log(object);
+  return object;
+}
 
-
-
-
-
-
+flipArray(["quick", "brown", "fox"]);
 
 /*
 ----------------------------------------
