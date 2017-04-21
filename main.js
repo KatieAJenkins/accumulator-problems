@@ -42,7 +42,7 @@ function sum (array) {
   return sum;
 }
 
-console.log(sum(array1));
+// console.log(sum(array1));
 
 sum(array1);
 
@@ -75,9 +75,9 @@ function doubleNumbers(array){
   return doubled;
 }
 
-console.log(doubleNumbers(array1));
+// console.log(doubleNumbers(array1));
 doubleNumbers(array1);
-console.log(doubleNumbers(emptyArray));
+// console.log(doubleNumbers(emptyArray));
 
 
 
@@ -138,19 +138,18 @@ function doubleLetters(string){
   // let doubledArray = [];
 
   for (var i = 0; i < string.length; i++){
-    console.log(string[i]);
+    // console.log(string[i]);
       doubledString += string[i] + string[i];
-      console.log(doubledString);
-
+      // console.log(doubledString);
   }
   // doubledArray.join("")
-
+  // console.log(doubledString);
   return doubledString;
 }
 
 
 
-
+doubleLetters('abc');
 
 
 
@@ -167,15 +166,19 @@ Example: if you pass it ["a", "b", "c"] and ["d", "e", "f"] then it should retur
 NOTE: you can assume each input will be the same length
 */
 
+function interleave(array1, array2){
+  var newArray = [];
+  for(var i = 0; i < array1.length; i++){
+    console.log(array1[i])
+    console.log(array2[i]);
+    newArray.push(array1[i], array2[i]);
+  }
+  console.log(newArray);
+  return newArray;
+};
 
 
-
-
-
-
-
-
-
+interleave(["a", "b", "c"], ["d", "e", "f"]);
 
 /*
 ----------------------------------------
