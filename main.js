@@ -83,8 +83,14 @@ Example: if you pass it [1,2,3] then it should return [2,4,6]
 // doubleNumbers(array1);
 // console.log(doubleNumbers(emptyArray));
 
+function double(array){
+   return array.map(function(element){
+    return element * 2;
+  });
+};
 
 
+console.log(double(array1));
 
 
 
