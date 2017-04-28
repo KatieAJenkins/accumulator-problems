@@ -29,25 +29,29 @@ Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
 
 let array1 = [1,2,3];
 
-function sum (array) {
-  let sum = 0;
+// function sum (array) {
+//   let sum = 0;
+//
+//   if(array.length === 0){
+//     return 0;
+//   }
+//
+//   for(var i = 0; i < array.length; i++){
+//     sum += array[i];
+//   }
+//   return sum;
+// }
+//
+// // console.log(sum(array1));
+//
+// sum(array1);
 
-  if(array.length === 0){
-    return 0;
-  }
 
-  for(var i = 0; i < array.length; i++){
-    sum += array[i];
-  }
-  return sum;
-}
+var sum = array1.reduce(function(prev, curr){
+  return prev + curr;
+});
 
-// console.log(sum(array1));
-
-sum(array1);
-
-
-
+// console.log(sum);
 
 
 /*
@@ -60,23 +64,23 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
-let emptyArray = [];
-
-function doubleNumbers(array){
-  let doubled = [];
-
-  if(array.length === 0){
-    return [];
-  }
-
-    for(var i = 0; i < array.length; i++){
-      doubled.push(array[i] * 2);
-    }
-  return doubled;
-}
-
-// console.log(doubleNumbers(array1));
-doubleNumbers(array1);
+// let emptyArray = [];
+//
+// function doubleNumbers(array){
+//   let doubled = [];
+//
+//   if(array.length === 0){
+//     return [];
+//   }
+//
+//     for(var i = 0; i < array.length; i++){
+//       doubled.push(array[i] * 2);
+//     }
+//   return doubled;
+// }
+//
+// // console.log(doubleNumbers(array1));
+// doubleNumbers(array1);
 // console.log(doubleNumbers(emptyArray));
 
 
@@ -213,13 +217,13 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 function flipArray(array){
   var object = {};
   for(var i = 0; i < array.length; i++){
-    var key = array[i]
-    var stringKey = key.toString();
-    console.log((typeof stringKey));
-    console.log(stringKey);
-    console.log('key', key);
-    console.log(array[i]);
-    console.log(object);
+    var key = array[i];
+    // var stringKey = key.toString();
+    // console.log((typeof stringKey));
+    // console.log(stringKey);
+    // console.log('key', key);
+    // console.log(array[i]);
+    // console.log(object);
     object[key] = i;
     // console.log(object[i]);
     // console.log(object[i] = array[i]);
