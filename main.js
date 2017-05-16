@@ -90,10 +90,7 @@ function double(array){
 };
 
 
-console.log(double(array1));
-
-
-
+// console.log(double(array1));
 
 /*
 ----------------------------------------
@@ -109,24 +106,29 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
-function multiplyNumbers(array, value){
-  let multipliedArray =[];
-
-  if(array.length === 0){
-    return [];
-  }
-
-    for(var i = 0; i < array.length; i++){
-      multipliedArray.push(array[i] * value);
-    }
-
-  return multipliedArray;
-}
+// function multiplyNumbers(array, value){
+//   let multipliedArray =[];
+//
+//   if(array.length === 0){
+//     return [];
+//   }
+//
+//     for(var i = 0; i < array.length; i++){
+//       multipliedArray.push(array[i] * value);
+//     }
+//
+//   return multipliedArray;
+// }
 
 // multiplyNumbers(array);
 
+function multiplyNumbers(array, value){
+  return array.map(function(element){
+    return element * value;
+  });
+}
 
-
+console.log(multiplyNumbers(array1, 2));
 
 
 
@@ -185,8 +187,20 @@ function interleave(array1, array2){
   return newArray;
 };
 
-
+///////SOLs CODE - check it out! Use reduce to solve but he is using forEach
 interleave(["a", "b", "c"], ["d", "e", "f"]);
+
+function interleave (array1, array2) {
+  return array2.forEach(function(value, index){
+    return array1.forEach(function(w,j){
+      console.log(w)
+      return w;
+    });
+    console.log('value ', value);
+    console.log('index ', index);
+  return value;
+  });
+}
 
 /*
 ----------------------------------------
