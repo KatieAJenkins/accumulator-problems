@@ -787,7 +787,18 @@ Example:
 If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
 */
 
-
+function addSignature(name, obj){
+  var difObj = {};
+  // if(Object.keys(obj).length === 0){
+  //   return {}
+  // }
+  for(var value in obj){
+    let newValue = value + "-signed";
+    console.log(newValue)
+    difObj[newValue] = obj[value] + " - "+ name;
+  }
+  return difObj
+}
 
 
 
